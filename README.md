@@ -1,5 +1,16 @@
 # The Fern Collection
 
-Twenty immersive web-design worlds by Sites by Fern.
+Twenty immersive website design worlds by Sites by Fern. The static, production-ready website is inside `dist/`.
 
-Static website output is in `dist/`. For Cloudflare Workers, deploy with `npm run deploy` (Wrangler). For Cloudflare Pages, use `dist` as the output directory and leave the build command blank.
+## Cloudflare Workers
+
+Build command: `npm run build` (a no-op for this static site)
+Deploy command: `npm run deploy`
+Root directory: `/`
+
+## Cloudflare Pages
+
+Build command: `npm run build`
+Build output directory: `dist`
+
+The image assets have been optimized to WebP for faster loading.

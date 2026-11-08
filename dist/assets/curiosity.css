@@ -1,0 +1,29 @@
+/* A surreal neon geometric experience for Curiosity Looks Good on You. */
+body{background:radial-gradient(ellipse at 85% 40%,#563078 0%,#2d124d 38%,#140923 78%),#1c082f;color:#ffe4fa}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(circle at 90% 25%,#eb6cce22,transparent 32%),linear-gradient(90deg,#1c092ed8 0%,#1b082d88 39%,#1b082d04 78%);pointer-events:none}
+.curiosity-shapes{position:fixed;z-index:0;width:min(69vw,1050px);height:92vh;right:-4vw;top:5vh;overflow:visible;pointer-events:none;filter:drop-shadow(0 0 25px #b657ed55);opacity:.5}
+.curiosity-shapes g{transform-origin:50% 50%;animation:shape-drift 16s ease-in-out infinite alternate}
+.curiosity-shapes .shapes-violet{animation-delay:-5s;animation-duration:20s}.curiosity-shapes .shapes-blue{animation-delay:-9s;animation-duration:13s}
+@keyframes shape-drift{from{transform:translate(-13px,12px) rotate(-3deg)}to{transform:translate(15px,-16px) rotate(4deg)}}
+header,.page,footer{position:relative;z-index:1}
+body[data-layout="3"] .page{display:flex;align-items:center;min-height:calc(100svh - 80px)}
+body[data-layout="3"] .copy{width:min(62%,780px)}
+body[data-layout="3"] .art{display:none}
+.illusion-room{position:absolute;z-index:2;right:0;top:0;width:min(65vw,1050px);height:100%;perspective:900px;pointer-events:none;isolation:isolate;filter:drop-shadow(0 0 12px #ea7df755)}
+.illusion-wall{position:absolute;inset:0;border:2px solid #b87af5;background:repeating-linear-gradient(0deg,transparent 0 46px,#af75fa66 47px 49px,transparent 50px 95px),linear-gradient(140deg,#e35dd728,#693db022);box-shadow:inset 0 0 75px #f381e633}
+.wall-left{clip-path:polygon(0 0,49% 29%,49% 73%,0 100%);background-color:#601d7344}.wall-right{clip-path:polygon(100% 0,51% 29%,51% 73%,100% 100%);background-color:#45227f55}
+.doorway-line{position:absolute;left:50%;top:16%;transform:translateX(-50%);width:min(80%,540px);margin:0;text-align:center;font:italic clamp(20px,2.5vw,35px)/1.13 Georgia,serif;color:#ffb8f5;text-shadow:0 0 13px #f056ed,0 0 30px #b357f8,0 3px 15px #150623;letter-spacing:.015em;pointer-events:none;z-index:3}
+.door-glow{position:absolute;width:21%;height:43%;left:39.5%;top:29%;background:radial-gradient(ellipse,#59afff69,#c15dff22 60%,transparent 75%);box-shadow:0 0 80px #dd70ff66}
+.wonder-door{position:absolute;pointer-events:auto;left:41%;top:30%;width:18%;height:42%;min-width:110px;min-height:200px;border:3px solid #f6a7ed;border-radius:6px 6px 0 0;background:linear-gradient(120deg,#61317bb5,#151e52cb);box-shadow:inset 0 0 32px #e58ae755,0 0 35px #fa6df188,0 0 65px #5598ff66;display:flex;align-items:center;justify-content:center;text-align:center;text-decoration:none;transform:perspective(600px) rotateY(-7deg);transform-origin:left center;transition:transform .6s,box-shadow .4s;cursor:pointer}
+.wonder-door:hover,.wonder-door:focus-visible{transform:perspective(600px) rotateY(-24deg);box-shadow:inset 0 0 45px #c8a4ff66,0 0 55px #ff8ff7,0 0 85px #6faaff}
+.wonder-door:focus-visible{outline:2px solid #a9d8ff;outline-offset:7px}
+.door-title{font:700 clamp(13px,1.5vw,22px)/1.4 'Trebuchet MS',Arial,sans-serif;color:#ffe3fc;text-shadow:0 0 12px #f26ce5,0 2px 7px #120a29;padding:6px}
+.door-knob{position:absolute;right:10px;top:54%;width:11px;height:11px;border-radius:50%;background:#a3d3ff;box-shadow:0 0 12px #66b4ff}
+.eyebrow{color:#f0b5ff;text-shadow:0 0 15px #ef85ff66}
+body[data-layout="3"] .heading{font:700 clamp(61px,7.7vw,120px)/.97 'Trebuchet MS',Arial,sans-serif;letter-spacing:-.075em;text-transform:none;color:#ffc7f4;text-shadow:2px 2px 0 #7848d9,0 0 25px #e557dd78;margin-bottom:29px}
+.subtitle{font:clamp(26px,2.6vw,39px)/1.12 Georgia,serif;font-style:italic;color:#d1bbff;text-shadow:0 3px 16px #17051f}
+.body{font:clamp(17px,1.5vw,23px)/1.55 Georgia,serif;color:#fceaf9;max-width:490px;text-shadow:0 3px 14px #14041d}
+.cta{border:1px solid #e58bf3;border-radius:14px;background:#9747c83b;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);color:#ffe6ff;box-shadow:0 0 26px #e45de966,inset 0 0 17px #a657e538;transition:transform .2s,box-shadow .2s,background .2s}
+.cta:hover,.cta:focus-visible{background:#7846c18c;box-shadow:0 0 36px #f06cfaad,0 0 11px #54aaff90;transform:translateY(-4px)}
+@media(max-width:750px){body::before{background:linear-gradient(90deg,#1c092eeb 0%,#1b082dcc 70%,#1b082d8a 100%)}.curiosity-shapes{width:105vw;height:85vh;right:-43vw;top:18vh;opacity:.45}body[data-layout="3"] .page{min-height:90svh;padding-top:45px;padding-bottom:390px}body[data-layout="3"] .copy{width:100%}body[data-layout="3"] .heading{font-size:clamp(57px,12.5vw,85px)}.illusion-room{position:absolute;top:auto;bottom:0;right:-5%;width:110%;height:390px}.doorway-line{top:9%;width:72%;font-size:clamp(19px,5vw,26px)}.wonder-door{min-width:100px;min-height:185px;left:41%;top:31%}.door-title{font-size:13px}}
+@media(prefers-reduced-motion:reduce){.curiosity-shapes g{animation:none}}

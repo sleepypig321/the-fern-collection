@@ -1,0 +1,48 @@
+/* Industrial design software layout: tool rail / document viewport / inspector. */
+.hero{padding-top:36px;padding-bottom:34px}
+.hero h1{font-size:clamp(35px,4vw,60px);max-width:none;margin:12px 0 14px;font-weight:620;line-height:1.12}
+.hero p{font-size:14px;max-width:900px;line-height:1.6;margin:0}
+.hero .goto{display:none}
+.workspace-wrap{padding-top:0;padding-bottom:55px;background:#e9eef1}
+.workspace-wrap>.shell{width:100%;max-width:1800px;padding-inline:clamp(12px,2vw,36px)}
+.workspace-head{padding:18px 2px 14px;margin:0;display:flex;gap:15px}
+.workspace-head h2{font-size:23px;letter-spacing:-.035em;margin:3px 0}
+.workspace-head .mono{font-size:10px;letter-spacing:.1em}
+.workspace-head p{margin:0;font-size:12px;max-width:450px;line-height:1.5}
+.workspace[data-layout=studio]{display:grid;grid-template-columns:76px minmax(0,1fr) 330px;gap:0;min-height:660px;background:#fff;border:1px solid #c9d5db;border-radius:8px;overflow:hidden;box-shadow:0 12px 38px #1e384512}
+.lab-rail{background:#f8fafb;border-right:1px solid #d9e2e7;display:flex;flex-direction:column;align-items:center;padding:19px 8px;gap:22px}
+.lab-rail-title{font:700 9px Inter,Arial,sans-serif;color:#8b9da8;letter-spacing:.14em}
+.lab-rail .toolrow{display:flex;flex-direction:column;gap:12px;width:100%;margin:0;align-items:stretch}
+.lab-rail .toolrow button{min-width:0;min-height:48px;padding:8px 2px;display:grid;place-items:center;line-height:1.3;font-size:10px;text-align:center;white-space:normal;border-color:transparent;background:transparent;color:#536a78}
+.lab-rail .toolrow button:hover,.lab-rail .toolrow button.selected{background:#dcecf4;color:#174965;border-color:#c1d7e3}
+.lab-stage{min-width:0;background:#eef2f4;display:flex;flex-direction:column}
+.lab-tabs{height:54px;display:flex;align-items:stretch;gap:0;background:#fff;border-bottom:1px solid #d8e2e8;flex-shrink:0}
+.lab-tab{border:0;background:transparent;border-bottom:2px solid transparent;padding:0 23px;font:600 12px Inter,Arial,sans-serif;color:#6e8796}
+.lab-tab:hover{background:#f5f9fa}.lab-tab.active{color:#174e70;border-bottom-color:#236c93}
+.lab-coords{font:10px 'SFMono-Regular',Consolas,monospace;color:#8ba2af;letter-spacing:.03em;margin:auto 17px auto auto;text-align:right}
+.lab-view{flex:1;min-width:0;padding:28px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.lab-view[hidden]{display:none!important}
+.lab-canvas-frame{width:min(100%,800px);background:#fff;border:1px solid #cfdae1;box-shadow:0 6px 26px #32526612;padding:0}
+.lab-canvas-frame canvas{width:100%;display:block;border:0;border-radius:0;background-color:#fff;background-image:linear-gradient(#aabfcd24 1px,transparent 1px),linear-gradient(90deg,#aabfcd24 1px,transparent 1px);background-size:20px 20px}
+.lab-canvas-caption{font:11px Inter,Arial,sans-serif;color:#8da0ab;margin-top:19px;text-align:center}
+.lab-blueprint-view #preview{width:min(100%,530px);aspect-ratio:600/650;box-shadow:0 9px 32px #10364c38}
+.lab-inspector{background:#fff;border-left:1px solid #d4dfe5;min-width:0}
+.lab-inspector-head{height:54px;display:flex;align-items:center;justify-content:space-between;padding:0 19px;border-bottom:1px solid #d8e2e8}
+.lab-inspector-head strong{font-size:12px;font-weight:650;color:#2e4757}.lab-inspector-head span{font:10px Consolas,monospace;color:#92a8b3}
+.lab-inspector-body{padding:9px 18px 20px}
+.lab-inspector-body .field{margin-top:14px}.lab-inspector-body .field label{font-size:11px;color:#587080}
+.lab-inspector-body .field textarea{min-height:115px;font-size:13px;line-height:1.55}
+.lab-inspector-body .params{grid-template-columns:1fr;gap:3px}
+.lab-inspector-body .generate{margin-top:17px;padding:15px;font-size:12px}
+.lab-inspector-body .output-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.lab-inspector-body .output-row button{padding:10px 5px;font-size:11px}
+.lab-inspector-body .output-row button:nth-child(3){grid-column:1/-1}
+.lab-section-label{font:700 9px Inter,Arial,sans-serif;letter-spacing:.15em;color:#8ba0ae;padding-bottom:8px;border-bottom:1px solid #e3e9ed;margin:24px 0 6px}
+.lab-inspector-body .notice{font-size:11px;color:#748d9a;margin-top:13px}
+.lab-inspector-body #status{background:#edf5f8;border-radius:4px;padding:9px 10px}
+.disclaimer{max-width:1180px;margin:18px auto 0;font-size:11px}
+.features{border-top:1px solid #d8e2e8;margin-top:20px;padding-top:55px}
+.finale{padding:65px 20px}
+@media(max-width:1050px){.workspace[data-layout=studio]{grid-template-columns:64px minmax(0,1fr) 285px}.lab-view{padding:14px}.lab-inspector-body{padding:9px 12px 16px}}
+@media(max-width:780px){.workspace[data-layout=studio]{grid-template-columns:62px minmax(0,1fr)}.lab-inspector{grid-column:1/-1;border-left:0;border-top:1px solid #d3dfe6}.lab-inspector-body{display:grid;grid-template-columns:1fr 1fr;gap:8px 20px;padding:18px}.lab-inspector-body .field,.lab-inspector-body .params,.lab-inspector-body .generate,.lab-inspector-body .output-row,.lab-inspector-body .notice{margin-top:4px}.lab-section-label{grid-column:1/-1;margin:14px 0 0}.lab-inspector-body #status{grid-column:1/-1}.lab-inspector-body .output-row{grid-column:1/-1;display:flex}.lab-inspector-body .output-row button{flex:1}.lab-view{min-height:440px}.workspace-head p{display:none}}
+@media(max-width:540px){.hero{padding:25px 20px}.hero h1{font-size:36px}.workspace-wrap>.shell{padding-inline:8px}.workspace-head{padding-inline:9px}.workspace-head h2{font-size:20px}.workspace[data-layout=studio]{grid-template-columns:1fr}.lab-rail{flex-direction:row;padding:9px;border-right:0;border-bottom:1px solid #dce5eb;gap:12px}.lab-rail .toolrow{flex-direction:row;gap:4px}.lab-rail .toolrow button{min-height:39px;font-size:10px;padding:6px}.lab-rail-title{display:none}.lab-view{min-height:330px;padding:12px}.lab-coords{display:none}.lab-inspector-body{grid-template-columns:1fr}.lab-inspector-body .output-row{flex-wrap:wrap}.lab-blueprint-view #preview{width:100%}}

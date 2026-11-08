@@ -1,0 +1,19 @@
+.forest-discovery-modal{position:absolute;z-index:60;inset:0;display:grid;place-items:center;padding:clamp(18px,4vw,55px)}
+.forest-discovery-modal[hidden]{display:none}
+.forest-discovery-backdrop{position:absolute;inset:0;background:#020c08df;backdrop-filter:blur(14px);animation:forest-fade-in .35s both}
+.forest-discovery-card{position:relative;z-index:1;width:min(940px,100%);display:grid;grid-template-columns:1.12fr .88fr;background:#eff0e4;color:#263c2b;box-shadow:0 32px 100px #0009;animation:forest-photo-in .5s ease-out both;max-height:min(780px,90vh)}
+.forest-discovery-photo{min-height:400px;overflow:hidden;background:#0c2217}
+.forest-discovery-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.forest-discovery-copy{padding:clamp(28px,4vw,58px);display:flex;flex-direction:column;justify-content:center}
+.forest-discovery-copy>span:first-child{font-size:10px;letter-spacing:.2em;font-weight:800;color:#667e62}
+.forest-discovery-copy h2{font:400 clamp(45px,5vw,76px)/.97 Georgia,serif;letter-spacing:-.06em;margin:23px 0;color:#193725}
+.forest-discovery-copy p{font-size:15px;line-height:1.85;color:#59725e;max-width:360px}
+.forest-discovery-controls{display:grid;gap:17px;margin-top:34px}
+.forest-discovery-controls button{border:0;background:#294e36;color:#f2f4e7;text-align:left;padding:18px 20px;letter-spacing:.14em;font-size:10px;font-weight:800}
+.forest-discovery-controls>span{font-size:9px;letter-spacing:.15em;color:#799078;font-weight:800}
+.forest-discovery-close{position:absolute;z-index:2;top:13px;right:14px;width:40px;height:40px;border:1px solid #314c3670;background:#eef0e7d9;color:#27422d;font-size:26px;line-height:1}
+.forest-game.photo-open .forest-panel,.forest-game.photo-open .forest-spot{pointer-events:none}
+@keyframes forest-fade-in{from{opacity:0}to{opacity:1}}
+@keyframes forest-photo-in{from{transform:translateY(20px) scale(.985);opacity:0}to{transform:none;opacity:1}}
+@media(max-width:700px){.forest-discovery-modal{padding:14px}.forest-discovery-card{grid-template-columns:1fr;grid-template-rows:minmax(170px,38vh) auto;max-height:calc(100svh - 30px);overflow:auto}.forest-discovery-photo{min-height:0}.forest-discovery-copy{padding:25px 25px 30px}.forest-discovery-copy h2{font-size:46px;margin:16px 0}.forest-discovery-copy p{font-size:13px;line-height:1.6}.forest-discovery-controls{margin-top:17px}.forest-discovery-controls button{padding:15px}}
+@media(prefers-reduced-motion:reduce){.forest-discovery-card,.forest-discovery-backdrop{animation:none}}

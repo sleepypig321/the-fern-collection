@@ -1,0 +1,21 @@
+/* Matrix-inspired terminal typography, original styling. */
+@font-face{font-family:'Share Tech Mono';src:url('/assets/share-tech-mono.ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap}
+:root{--terminal-green:#a0fbbb;--terminal-bright:#d5ffe0;--terminal-muted:#71d996}
+body{font-family:'Share Tech Mono','Courier New',monospace;color:var(--terminal-green)}
+header,header a,header .tag{font-family:'Share Tech Mono','Courier New',monospace;color:var(--terminal-bright);letter-spacing:.18em}
+.eyebrow{font-family:'Share Tech Mono','Courier New',monospace;color:#70ff99;letter-spacing:.27em;text-shadow:0 0 12px #35ff7390}
+.intro h1{font-family:'Share Tech Mono','Courier New',monospace;font-weight:400;font-size:clamp(54px,7.8vw,112px);line-height:1.05;letter-spacing:-.07em;color:#b2ffc7;text-shadow:0 0 10px #18e963a3,0 0 35px #18e96355,2px 0 #0a6b39;animation:terminal-pulse 8s ease-in-out infinite}
+.intro p{font-family:'Share Tech Mono','Courier New',monospace;font-size:clamp(15px,1.5vw,19px);line-height:1.65;color:#b1e4be;max-width:710px}
+.world-name{font-family:'Share Tech Mono','Courier New',monospace;font-size:clamp(13px,1.24vw,17px);line-height:1.3;color:#c3f6d1;letter-spacing:-.025em;text-shadow:0 0 10px #28e86a60,0 3px 10px #000}
+.number{font-family:'Share Tech Mono','Courier New',monospace;font-size:14px;color:#e5ffee;text-shadow:0 0 12px #00ff55,0 3px 6px #000}
+.world:nth-child(4) .sphere{background:radial-gradient(circle at 67% 42%,transparent 23%,#f478da 24%,#f478da 27%,transparent 28%),conic-gradient(from 30deg,#251143,#6b2c97,#183e7d,#9b299a,#251143);border-color:#f6b5ff;box-shadow:inset -20px -24px 40px #0009,0 0 27px #c469e799}
+.creator-entry,.outro a{font-family:'Share Tech Mono','Courier New',monospace;color:#beffd0;letter-spacing:.09em;border-color:#83e6a3;background:#002d1f99;box-shadow:0 0 19px #33f07730}
+.creator-entry:hover,.outro a:hover{background:#125a3eac;box-shadow:0 0 28px #36ff8c7d}
+/* Keep the creator invitation in its original warm gold/orange treatment. */
+.creator-entry{color:#ead5aa;border-color:#c8aa78;background:#2017239e;box-shadow:0 0 24px #7b5d8e44}
+.creator-entry:hover,.creator-entry:focus-visible{color:#fff0c7;background:#503854aa;box-shadow:0 0 36px #9873b777}
+.outro p{font-family:'Share Tech Mono','Courier New',monospace;font-size:clamp(25px,2.8vw,39px);line-height:1.4;color:#baffcd;text-shadow:0 0 13px #37ff7b47}
+footer{font-family:'Share Tech Mono','Courier New',monospace;color:#9ddbaf;letter-spacing:.12em}
+@keyframes terminal-pulse{0%,100%{text-shadow:0 0 10px #18e963a3,0 0 35px #18e96355,2px 0 #0a6b39}50%{text-shadow:0 0 15px #18e963d0,0 0 43px #18e96378,-1px 0 #0a6b39}}
+@media(max-width:600px){.intro h1{font-size:clamp(44px,10.5vw,70px);letter-spacing:-.07em}.intro p{font-size:15px}.world-name{font-size:14px}.creator-entry{font-size:10px}}
+@media(prefers-reduced-motion:reduce){.intro h1{animation:none}}

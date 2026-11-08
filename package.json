@@ -1,0 +1,13 @@
+{
+  "name": "the-fern-collection",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node -e \"console.log('Static site already built in dist')\"",
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}

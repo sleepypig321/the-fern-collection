@@ -1,0 +1,67 @@
+@font-face{font-family:'Cafe Italic';src:url('/assets/cormorant-italic.ttf') format('truetype');font-display:swap}
+body{background:#f3e8da!important;color:#24201f!important;font-family:Arial,Helvetica,sans-serif}
+body header,body footer{position:relative;z-index:2;background:#f3e8da;color:#342b27}
+body header{border-bottom:1px solid #44372f}
+body footer{border-top:1px solid #44372f}
+.cafe-page{overflow:hidden}
+.cafe-hero{display:grid;grid-template-columns:47% 53%;min-height:720px;background:#e8d7c6;position:relative}
+.cafe-headline{z-index:2;position:relative;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:80px 0 80px clamp(25px,7vw,120px)}
+.cafe-issue,.cafe-overline{font:700 11px 'Courier New',monospace;letter-spacing:.17em;color:#a45035}
+.cafe-headline h1{font:900 clamp(57px,6.3vw,113px)/.86 Georgia,serif;letter-spacing:-.08em;margin:40px 0 31px;color:#241a1a}
+.cafe-headline h1 em,.cafe-intro h2 em,.cafe-shop h2 em,.cafe-build h2 em{display:block;color:#974f43;font:400 1.15em/.86 'Cafe Italic',Georgia,serif;letter-spacing:-.06em}
+.cafe-headline p{max-width:490px;font:clamp(21px,2.1vw,30px)/1.22 Georgia,serif;color:#644b44;margin:0 0 31px}
+.cafe-hero-actions{display:flex;gap:23px;flex-wrap:wrap;align-items:center}
+.cafe-hero-actions a,.cafe-build a{display:inline-flex;justify-content:space-between;gap:32px;padding:18px 24px;background:#25201e;color:#fff9f0;text-decoration:none;border:1px solid #25201e;font:700 11px Arial,sans-serif;letter-spacing:.13em}
+.cafe-hero-actions a:hover,.cafe-build a:hover{background:#8e4835}
+.cafe-hero-actions>span{font:700 10px 'Courier New',monospace;letter-spacing:.12em;color:#907166}
+.cafe-hero-photo{background:url('/assets/art-cafe-interior.webp') center/cover no-repeat;border-left:7px solid #24201e;min-height:580px}
+.cafe-hero-stamp{position:absolute;right:30px;bottom:29px;transform:rotate(7deg);width:130px;height:130px;border-radius:50%;display:grid;place-items:center;text-align:center;background:#e2a861;color:#382422;border:2px dashed #4c2d28;font:900 20px/1.05 Georgia,serif;box-shadow:0 7px 25px #42251c66}
+.cafe-ticker{display:flex;justify-content:space-around;flex-wrap:wrap;gap:18px;padding:23px;background:#273249;color:#fae8d3;font:700 11px 'Courier New',monospace;letter-spacing:.14em}
+.cafe-intro{display:grid;grid-template-columns:1.25fr .75fr;align-items:center;gap:55px;background:#f7eddf;padding:110px clamp(24px,8vw,130px);border-bottom:1px solid #baada2}
+.cafe-intro h2,.cafe-shop h2,.cafe-build h2{font:400 clamp(46px,5vw,77px)/.96 Georgia,serif;letter-spacing:-.06em;margin:24px 0 0;color:#28201d}
+.cafe-intro>p{border-left:4px solid #24201e;padding-left:27px;font:clamp(17px,1.55vw,24px)/1.54 Georgia,serif;color:#685044}
+.cafe-shop{background:#f0e8dd;padding:100px clamp(22px,6.5vw,105px) 110px}
+.cafe-shop-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:33px}
+.cafe-bag-toggle{background:#272221;color:#f6eee6;border:0;padding:15px 21px;cursor:pointer;white-space:nowrap;font:700 12px Arial,sans-serif;letter-spacing:.12em}
+.cafe-bag-toggle span{display:inline-grid;place-items:center;background:#d5ab80;color:#24201e;border-radius:50%;min-width:25px;height:25px;margin-left:8px}
+.cafe-tabs{display:flex;gap:0;border-top:3px solid #25201f;border-bottom:1px solid #25201f;margin-bottom:36px;overflow-x:auto}
+.cafe-tabs button{cursor:pointer;border:0;border-right:1px solid #b5a99e;background:transparent;padding:22px clamp(16px,3vw,42px);font:900 clamp(13px,1.7vw,22px) Georgia,serif;letter-spacing:-.015em;color:#6a564b;white-space:nowrap}
+.cafe-tabs button span{font:700 9px 'Courier New',monospace;vertical-align:top;margin-left:6px}
+.cafe-tabs button[aria-selected="true"]{background:#292321;color:#fff2e5}
+.cafe-tabs button:focus-visible{outline:3px solid #c66f42;outline-offset:-3px}
+.cafe-panel[hidden]{display:none!important}
+.cafe-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:23px}
+.cafe-card{background:#fff9f0;border:1px solid #c9b9a9;min-width:0;box-shadow:9px 10px 0 #a9816230}
+.cafe-product-photo{width:100%;aspect-ratio:4/4.15;background-size:300% 100%;background-repeat:no-repeat;border-bottom:2px solid #292321;background-position:var(--photo-position) center}
+.cafe-beverages{background-image:url('/assets/art-cafe-beverages.webp')}.cafe-art{background-image:url('/assets/art-cafe-artworks.webp')}.cafe-pastries{background-image:url('/assets/art-cafe-pastries.webp')}
+.cafe-card-info{padding:27px 24px 25px}
+.cafe-card-num{font:700 10px 'Courier New',monospace;color:#96694e;letter-spacing:.11em}
+.cafe-card h3{font:400 clamp(25px,2.8vw,39px)/1 Georgia,serif;letter-spacing:-.045em;margin:16px 0;color:#271d1b}
+.cafe-card p{min-height:62px;font:16px/1.55 Georgia,serif;color:#68574d;margin:0 0 27px}
+.cafe-card-bottom{border-top:2px solid #2d2421;padding-top:16px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.cafe-card-bottom>span{font:700 20px Georgia,serif}
+.cafe-add{background:#273249;color:#fff9ef;border:0;padding:13px 15px;cursor:pointer;font:700 10px Arial,sans-serif;letter-spacing:.08em}
+.cafe-add:hover,.cafe-add:focus-visible{background:#9b5238}
+.cafe-demo-reminder{margin-top:35px;color:#7e5145;font:700 11px/1.6 'Courier New',monospace;letter-spacing:.08em}
+.cafe-gallery-note{text-align:center;background:#d7b7a0;padding:90px 20px;color:#332420}
+.cafe-gallery-note span,.cafe-build>p{font:700 11px 'Courier New',monospace;letter-spacing:.15em}
+.cafe-gallery-note blockquote{font:400 clamp(32px,4.3vw,66px)/1.1 'Cafe Italic',Georgia,serif;max-width:830px;margin:24px auto}
+.cafe-gallery-note p{font:17px Georgia,serif}
+.cafe-build{text-align:center;background:#ebe0d5;padding:100px 24px}
+.cafe-build h2{margin:20px auto 35px}
+.cafe-disclaimer{background:#282320;color:#ead8c6;padding:35px clamp(24px,7vw,110px);text-align:center;border-top:5px solid #d8a36e}
+.cafe-disclaimer strong{font:700 12px 'Courier New',monospace;letter-spacing:.14em;color:#f4c7a8}
+.cafe-disclaimer p{max-width:920px;margin:13px auto 0;font:12px/1.75 Arial,sans-serif;color:#e1d7cd}
+.cafe-bag-backdrop:not([hidden]){position:fixed;inset:0;background:#120c09a3;z-index:10}
+.cafe-bag:not([hidden]){position:fixed;right:0;top:0;bottom:0;width:min(100%,430px);background:#f8f1e7;z-index:11;box-shadow:-25px 0 70px #0005;padding:30px;display:flex;flex-direction:column;overflow:auto}
+.cafe-bag-header{display:flex;justify-content:space-between;align-items:center;border-bottom:3px solid #28201c}
+.cafe-bag-header h2{font:900 28px Georgia,serif}
+.cafe-bag-close{border:0;background:transparent;font:40px Georgia,serif;cursor:pointer}
+.cafe-bag>p{font:14px/1.5 Georgia,serif;color:#765649}
+.cafe-bag-items{list-style:none;margin:20px 0;padding:0}
+.cafe-bag-items li{display:grid;grid-template-columns:1fr auto;gap:10px;padding:16px 0;border-bottom:1px solid #b3a499;font:16px Georgia,serif}
+.cafe-bag-items li button{grid-column:1/-1;justify-self:end;border:0;background:transparent;color:#8a4a38;font:700 11px Arial,sans-serif;cursor:pointer}
+.cafe-bag-total{margin-top:auto;display:flex;justify-content:space-between;border-top:3px solid #28201c;padding-top:19px;font:700 14px Arial,sans-serif}
+.cafe-bag-warning{padding:20px;margin-top:26px;color:#fff6ea;background:#292421;font:700 12px/1.5 'Courier New',monospace;text-align:center}
+@media(max-width:850px){.cafe-hero{grid-template-columns:1fr}.cafe-headline{padding:70px 35px}.cafe-hero-photo{height:430px;min-height:0;border-left:0;border-top:7px solid #24201e}.cafe-hero-stamp{top:530px}.cafe-intro{grid-template-columns:1fr;gap:20px;padding:80px 30px}.cafe-grid{gap:14px}.cafe-card-info{padding:19px 16px}.cafe-card-bottom{align-items:start;flex-direction:column}}
+@media(max-width:620px){.cafe-headline h1{font-size:clamp(52px,12vw,81px)}.cafe-headline p{font-size:23px}.cafe-hero-stamp{top:545px;right:17px;width:95px;height:95px;font-size:14px}.cafe-hero-photo{height:330px}.cafe-shop{padding:75px 18px}.cafe-shop-head{align-items:start}.cafe-shop h2{font-size:54px}.cafe-grid{grid-template-columns:1fr;gap:28px}.cafe-card-bottom{align-items:center;flex-direction:row}.cafe-product-photo{aspect-ratio:1.2}.cafe-ticker{justify-content:center}.cafe-gallery-note{padding:70px 20px}.cafe-bag-toggle{font-size:10px;padding:12px 10px}}
