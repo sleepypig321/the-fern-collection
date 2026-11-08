@@ -14,3 +14,5 @@ Build command: `npm run build`
 Build output directory: `dist`
 
 The image assets have been optimized to WebP for faster loading.
+
+Deployment retry requested on 2026-11-08 after the complete site source was uploaded.
