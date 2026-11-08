@@ -1,0 +1,9 @@
+/* Keep interactive discoveries clear of the large forest heading. */
+@media (min-width: 901px) {
+  .forest-spot[data-discovery="cedar"] { left: 88%; top: 29%; }
+  .forest-spot[data-discovery="light"] { left: 87%; top: 66%; }
+}
+@media (min-width: 601px) and (max-width: 900px) {
+  .forest-spot[data-discovery="cedar"] { left: 86%; top: 33%; }
+  .forest-spot[data-discovery="light"] { left: 84%; top: 67%; }
+}
